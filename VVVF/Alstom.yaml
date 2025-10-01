@@ -22,16 +22,21 @@ AcceleratePattern:
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: false
   EnableFreeRunOff: true
+  StuckFreeRunOff: false
   EnableNormal: true
   PulseMode:
     PulseType: SYNC
-    PulseCount:  1
+    PulseCount: 1
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: false
-  StuckFreeRunOff: false
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
@@ -44,6 +49,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: &o0 []
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -55,6 +62,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -66,6 +75,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -135,28 +146,33 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 64
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: false
   EnableFreeRunOff: true
+  StuckFreeRunOff: false
   EnableNormal: true
   PulseMode:
     PulseType: SHE
     PulseCount: 3
+    Alternative: Alt1
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: false
-  StuckFreeRunOff: false
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
       StartFrequency: 64
-      StartAmplitude: 1.2250000000000001
+      StartAmplitude: 1.225
       EndFrequency: 70
       EndAmplitude: 1.26
       CurveChangeRate: 0
@@ -164,10 +180,12 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 64
-      StartAmplitude: 1.2250000000000001
+      StartAmplitude: 1.225
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
@@ -175,10 +193,12 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 64
-      StartAmplitude: 0.86899999999999999
+      StartAmplitude: 0.869
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
@@ -186,6 +206,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -255,23 +277,28 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 57
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: false
   EnableFreeRunOff: true
+  StuckFreeRunOff: false
   EnableNormal: true
   PulseMode:
     PulseType: SHE
     PulseCount: 5
+    Alternative: Alt2
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: false
-  StuckFreeRunOff: false
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
@@ -284,6 +311,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 57
@@ -295,10 +324,12 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 57
-      StartAmplitude: 0.86899999999999999
+      StartAmplitude: 0.869
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
@@ -306,6 +337,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -375,28 +408,33 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 52
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
     PulseType: SHE
     PulseCount: 7
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: true
-  StuckFreeRunOff: true
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
       StartFrequency: 52
-      StartAmplitude: 0.96399999999999997
+      StartAmplitude: 0.964
       EndFrequency: 57
       EndAmplitude: 1.014275093
       CurveChangeRate: 0
@@ -404,6 +442,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -415,6 +455,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -426,6 +468,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -495,28 +539,33 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 35.700000000000003
+- ControlFrequencyFrom: 35.7
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
     PulseType: SHE
     PulseCount: 11
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: true
-  StuckFreeRunOff: true
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 35.700000000000003
-      StartAmplitude: 0.71857249099999998
+      StartFrequency: 35.7
+      StartAmplitude: 0.718572491
       EndFrequency: 52
       EndAmplitude: 1.014275093
       CurveChangeRate: 0
@@ -524,6 +573,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -535,6 +586,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -546,6 +599,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -615,39 +670,48 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 27.5
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
     PulseType: SYNC
-    PulseCount:  15
+    PulseCount: 15
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics:
     - Harmonic: 3
-      Amplitude: 0.20000000000000001
+      IsHarmonicProportional: true
+      Amplitude: 0.2
+      IsAmplitudeProportional: true
       InitialPhase: 0
       Type: Sine
-    Alternative: Default
-  StuckFreeRunOn: true
-  StuckFreeRunOff: true
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
       StartFrequency: 27.5
-      StartAmplitude: 0.56981412600000003
-      EndFrequency: 35.700000000000003
-      EndAmplitude: 0.71857249099999998
+      StartAmplitude: 0.569814126
+      EndFrequency: 35.7
+      EndAmplitude: 0.718572491
       CurveChangeRate: 0
       CutOffAmplitude: -1
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -659,6 +723,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -670,6 +736,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -739,35 +807,42 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 11.300000000000001
+- ControlFrequencyFrom: 11.3
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
     PulseType: SYNC
-    PulseCount:  21
+    PulseCount: 21
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: true
-  StuckFreeRunOff: true
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 11.300000000000001
-      StartAmplitude: 0.27592565099999999
+      StartFrequency: 11.3
+      StartAmplitude: 0.275925651
       EndFrequency: 27.5
-      EndAmplitude: 0.56981412600000003
+      EndAmplitude: 0.569814126
       CurveChangeRate: 0
       CutOffAmplitude: -1
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -779,6 +854,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -790,6 +867,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -859,34 +938,42 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
     PulseType: ASYNC
+    PulseCount: 1
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: true
-  StuckFreeRunOff: true
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
       StartFrequency: 0
       StartAmplitude: 0
-      EndFrequency: 11.300000000000001
-      EndAmplitude: 0.27592565099999999
+      EndFrequency: 11.3
+      EndAmplitude: 0.275925651
       CurveChangeRate: 0
       CutOffAmplitude: -1
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -898,6 +985,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -909,6 +998,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -978,7 +1069,7 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 BrakingPattern:
@@ -986,16 +1077,21 @@ BrakingPattern:
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: false
   EnableFreeRunOff: true
+  StuckFreeRunOff: false
   EnableNormal: true
   PulseMode:
     PulseType: SYNC
-    PulseCount:  1
+    PulseCount: 1
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: false
-  StuckFreeRunOff: false
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
@@ -1008,6 +1104,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -1019,6 +1117,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -1030,6 +1130,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1099,28 +1201,33 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 65.700000000000003
+- ControlFrequencyFrom: 65.7
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: false
   EnableFreeRunOff: true
+  StuckFreeRunOff: false
   EnableNormal: true
   PulseMode:
     PulseType: SHE
     PulseCount: 3
+    Alternative: Alt1
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: false
-  StuckFreeRunOff: false
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 65.700000000000003
-      StartAmplitude: 1.2250000000000001
+      StartFrequency: 65.7
+      StartAmplitude: 1.225
       EndFrequency: 67.5
       EndAmplitude: 1.26
       CurveChangeRate: 0
@@ -1128,10 +1235,12 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
-      StartFrequency: 65.700000000000003
-      StartAmplitude: 1.2250000000000001
+      StartFrequency: 65.7
+      StartAmplitude: 1.225
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
@@ -1139,10 +1248,12 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
-      StartFrequency: 65.700000000000003
-      StartAmplitude: 1.2250000000000001
+      StartFrequency: 65.7
+      StartAmplitude: 1.225
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
@@ -1150,6 +1261,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1219,39 +1332,46 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 58.5
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: false
   EnableFreeRunOff: true
+  StuckFreeRunOff: false
   EnableNormal: true
   PulseMode:
     PulseType: SHE
     PulseCount: 5
+    Alternative: Alt2
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: false
-  StuckFreeRunOff: false
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
       StartFrequency: 58.5
-      StartAmplitude: 1.0549999999999999
-      EndFrequency: 65.700000000000003
-      EndAmplitude: 1.2450000000000001
+      StartAmplitude: 1.055
+      EndFrequency: 65.7
+      EndAmplitude: 1.245
       CurveChangeRate: 0
       CutOffAmplitude: -1
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 58.5
-      StartAmplitude: 1.0549999999999999
+      StartAmplitude: 1.055
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
@@ -1259,10 +1379,12 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 58.5
-      StartAmplitude: 1.0549999999999999
+      StartAmplitude: 1.055
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
@@ -1270,6 +1392,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1339,35 +1463,42 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 47.5
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
     PulseType: SHE
     PulseCount: 7
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: true
-  StuckFreeRunOff: true
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
       StartFrequency: 47.5
-      StartAmplitude: 0.87695652199999996
+      StartAmplitude: 0.876956522
       EndFrequency: 58
-      EndAmplitude: 1.0549999999999999
+      EndAmplitude: 1.055
       CurveChangeRate: 0
       CutOffAmplitude: -1
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -1379,6 +1510,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -1390,6 +1523,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1459,35 +1594,42 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 34.100000000000001
+- ControlFrequencyFrom: 34.1
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
     PulseType: SHE
     PulseCount: 11
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: true
-  StuckFreeRunOff: true
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 34.100000000000001
-      StartAmplitude: 0.64973913000000005
+      StartFrequency: 34.1
+      StartAmplitude: 0.64973913
       EndFrequency: 47.5
-      EndAmplitude: 0.87695652199999996
+      EndAmplitude: 0.876956522
       CurveChangeRate: 0
       CutOffAmplitude: -1
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -1499,6 +1641,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -1510,6 +1654,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1579,35 +1725,42 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 24.899999999999999
+- ControlFrequencyFrom: 24.9
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
     PulseType: SYNC
-    PulseCount:  15
+    PulseCount: 15
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: true
-  StuckFreeRunOff: true
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 24.899999999999999
-      StartAmplitude: 0.49373913000000003
-      EndFrequency: 34.100000000000001
-      EndAmplitude: 0.64973913000000005
+      StartFrequency: 24.9
+      StartAmplitude: 0.49373913
+      EndFrequency: 34.1
+      EndAmplitude: 0.64973913
       CurveChangeRate: 0
       CutOffAmplitude: -1
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -1619,6 +1772,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -1630,6 +1785,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1699,35 +1856,42 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 15
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
     PulseType: SYNC
-    PulseCount:  21
+    PulseCount: 21
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
-    Alternative: Default
-  StuckFreeRunOn: true
-  StuckFreeRunOff: true
+    PulseData: {}
   Amplitude:
     Default:
       Mode: Linear
       StartFrequency: 15
-      StartAmplitude: 0.32926086999999998
-      EndFrequency: 24.899999999999999
-      EndAmplitude: 0.49373913000000003
+      StartAmplitude: 0.32926087
+      EndFrequency: 24.9
+      EndAmplitude: 0.49373913
       CurveChangeRate: 0
       CutOffAmplitude: -1
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -1739,6 +1903,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -1750,6 +1916,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1819,6 +1987,6 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []

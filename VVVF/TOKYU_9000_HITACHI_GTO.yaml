@@ -3,22 +3,22 @@ MasconData:
   Braking:
     On:
       FrequencyChangeRate: 60
-      MaxControlFrequency: 79.5
+      MaxControlFrequency: 62
     Off:
-      FrequencyChangeRate: 100
-      MaxControlFrequency: 79.5
+      FrequencyChangeRate: 60
+      MaxControlFrequency: 62
   Accelerating:
     On:
       FrequencyChangeRate: 60
-      MaxControlFrequency: 80
+      MaxControlFrequency: 51
     Off:
-      FrequencyChangeRate: 100
-      MaxControlFrequency: 80
+      FrequencyChangeRate: 60
+      MaxControlFrequency: 51
 MinimumFrequency:
-  Accelerating: 0
-  Braking: 0
+  Accelerating: 1
+  Braking: -1
 AcceleratePattern:
-- ControlFrequencyFrom: 80
+- ControlFrequencyFrom: 51
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
@@ -37,43 +37,54 @@ AcceleratePattern:
     BaseWave: Sine
     DiscontinuousMode: None
     PulseHarmonics: []
-    PulseData: {}
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 1
-      EndFrequency: 10
-      EndAmplitude: 1
+      StartFrequency: 51
+      StartAmplitude: 0.092
+      EndFrequency: 51.1
+      EndAmplitude: 0.001
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: &o0 []
     PowerOn:
       Mode: Linear
-      StartFrequency: 0
+      StartFrequency: 1
       StartAmplitude: 1
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
-      StartFrequency: 0
+      StartFrequency: 1
       StartAmplitude: 1
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -107,10 +118,10 @@ AcceleratePattern:
       Constant: -1
       MovingValue:
         Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
         Degree: 2
         CurveRate: 0
       VibratoData:
@@ -119,10 +130,10 @@ AcceleratePattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Lowest:
@@ -130,10 +141,10 @@ AcceleratePattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Interval:
@@ -150,16 +161,16 @@ AcceleratePattern:
         BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 59
+- ControlFrequencyFrom: 48.5
   RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
+  RotateFrequencyBelow: 51
   EnableFreeRunOn: true
   StuckFreeRunOn: false
   EnableFreeRunOff: true
   StuckFreeRunOff: false
   EnableNormal: true
   PulseMode:
-    PulseType: CHM
+    PulseType: SYNC
     PulseCount: 3
     Alternative: Alt1
     DiscreteTime:
@@ -169,43 +180,54 @@ AcceleratePattern:
     BaseWave: Sine
     DiscontinuousMode: None
     PulseHarmonics: []
-    PulseData: {}
+    PulseData:
+      Phase:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 59
-      StartAmplitude: 1.239
-      EndFrequency: 80
-      EndAmplitude: 1.706578125
+      StartFrequency: 48.5
+      StartAmplitude: 0.857
+      EndFrequency: 50.999
+      EndAmplitude: 0.95
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
-      StartFrequency: 59
-      StartAmplitude: 1.239
+      StartFrequency: 48.5
+      StartAmplitude: 0.857
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
-      StartFrequency: 59
-      StartAmplitude: 1.239
+      StartFrequency: 48.5
+      StartAmplitude: 0.857
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -239,10 +261,10 @@ AcceleratePattern:
       Constant: -1
       MovingValue:
         Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
         Degree: 2
         CurveRate: 0
       VibratoData:
@@ -251,10 +273,10 @@ AcceleratePattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Lowest:
@@ -262,10 +284,10 @@ AcceleratePattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Interval:
@@ -282,8 +304,2154 @@ AcceleratePattern:
         BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 57
+- ControlFrequencyFrom: 48.5
+  RotateFrequencyFrom: 51
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: false
+  EnableFreeRunOff: false
+  StuckFreeRunOff: false
+  EnableNormal: false
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 3
+    Alternative: Alt1
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Phase:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 48.5
+      StartAmplitude: 0.857
+      EndFrequency: 50.999
+      EndAmplitude: 0.95
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 48.5
+      StartAmplitude: 0.857
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 48.5
+      StartAmplitude: 0.857
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 43
   RotateFrequencyFrom: -1
+  RotateFrequencyBelow: 51
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 3
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 43
+      StartAmplitude: 0.851
+      EndFrequency: 48.499
+      EndAmplitude: 0.953
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: 0.2
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 43
+  RotateFrequencyFrom: 51
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: false
+  StuckFreeRunOn: false
+  EnableFreeRunOff: true
+  StuckFreeRunOff: false
+  EnableNormal: false
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 3
+    Alternative: Alt1
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Phase:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 43
+      StartAmplitude: 0.8
+      EndFrequency: 50.999
+      EndAmplitude: 0.95
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 43
+      StartAmplitude: 0.8
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 43
+      StartAmplitude: 0.8
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 43
+  RotateFrequencyFrom: 51
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: false
+  StuckFreeRunOff: true
+  EnableNormal: false
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 3
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 43
+      StartAmplitude: 0.851
+      EndFrequency: 48.499
+      EndAmplitude: 0.953
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: 0.2
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 42.9
+  RotateFrequencyFrom: 51
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: false
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: false
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 3
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: 43
+      EndAmplitude: 0.889614936
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: 0.2
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 36
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 5
+    Alternative: Square
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 36
+      StartAmplitude: 0.707
+      EndFrequency: 42.999
+      EndAmplitude: 0.843
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 28
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 9
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: ModifiedSine2
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 28
+      StartAmplitude: 0.664
+      EndFrequency: 35.999
+      EndAmplitude: 0.853
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 16
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 15
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 16
+      StartAmplitude: 0.397
+      EndFrequency: 27.999
+      EndAmplitude: 0.697
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 7
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 27
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 7
+      StartAmplitude: 0.174
+      EndFrequency: 15.999
+      EndAmplitude: 0.397
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 6
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 45
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 6
+      StartAmplitude: 0.148
+      EndFrequency: 6.999
+      EndAmplitude: 0.172
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 0
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: ASYNC
+    PulseCount: 1
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: 5.999
+      EndAmplitude: 0.148
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: 200
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+BrakingPattern:
+- ControlFrequencyFrom: 62
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: false
+  EnableFreeRunOff: true
+  StuckFreeRunOff: false
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 1
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 62
+      StartAmplitude: 0.101
+      EndFrequency: 62.1
+      EndAmplitude: 0.001
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 1
+      StartAmplitude: 1
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 1
+      StartAmplitude: 1
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 56.5
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: 62
+  EnableFreeRunOn: true
+  StuckFreeRunOn: false
+  EnableFreeRunOff: true
+  StuckFreeRunOff: false
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 3
+    Alternative: Alt1
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 56.5
+      StartAmplitude: 0.806
+      EndFrequency: 61.999
+      EndAmplitude: 0.95
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 56.5
+      StartAmplitude: 0.806
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 56.5
+      StartAmplitude: 0.806
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 52
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: 62
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 3
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 52
+      StartAmplitude: 0.847
+      EndFrequency: 56.499
+      EndAmplitude: 0.915
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: 0.2
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 52
+  RotateFrequencyFrom: 62
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: false
+  EnableFreeRunOff: true
+  StuckFreeRunOff: false
+  EnableNormal: false
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 3
+    Alternative: Alt1
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 52
+      StartAmplitude: 0.8
+      EndFrequency: 61.999
+      EndAmplitude: 0.95
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 52
+      StartAmplitude: 0.8
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 52
+      StartAmplitude: 0.8
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 51.9
+  RotateFrequencyFrom: 62
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
   StuckFreeRunOn: true
@@ -301,17 +2469,28 @@ AcceleratePattern:
     BaseWave: Sine
     DiscontinuousMode: None
     PulseHarmonics: []
-    PulseData: {}
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
   Amplitude:
     Default:
       Mode: Linear
       StartFrequency: 0
       StartAmplitude: 0
-      EndFrequency: 59
-      EndAmplitude: 0.978
+      EndFrequency: 51.9
+      EndAmplitude: 0.90816568
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -320,11 +2499,11 @@ AcceleratePattern:
       Mode: Linear
       StartFrequency: 0
       StartAmplitude: 0
-      EndFrequency: 59
-      EndAmplitude: 0.978
+      EndFrequency: -1
+      EndAmplitude: -1
       CurveChangeRate: 0
-      CutOffAmplitude: 0
-      MaxAmplitude: 1.25
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -333,11 +2512,11 @@ AcceleratePattern:
       Mode: Linear
       StartFrequency: 0
       StartAmplitude: 0
-      EndFrequency: 59
-      EndAmplitude: 0.978
+      EndFrequency: -1
+      EndAmplitude: -1
       CurveChangeRate: 0
-      CutOffAmplitude: 0
-      MaxAmplitude: 1.25
+      CutOffAmplitude: 0.2
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -371,10 +2550,10 @@ AcceleratePattern:
       Constant: -1
       MovingValue:
         Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
         Degree: 2
         CurveRate: 0
       VibratoData:
@@ -383,10 +2562,10 @@ AcceleratePattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Lowest:
@@ -394,10 +2573,10 @@ AcceleratePattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Interval:
@@ -414,18 +2593,18 @@ AcceleratePattern:
         BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 57
+- ControlFrequencyFrom: 42
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
-  StuckFreeRunOn: false
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
-  StuckFreeRunOff: false
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
-    PulseType: CHM
+    PulseType: SYNC
     PulseCount: 5
-    Alternative: Alt1
+    Alternative: Square
     DiscreteTime:
       Enabled: false
       Steps: 2
@@ -433,43 +2612,54 @@ AcceleratePattern:
     BaseWave: Sine
     DiscontinuousMode: None
     PulseHarmonics: []
-    PulseData: {}
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 57
-      StartAmplitude: 1.1944687500000002
-      EndFrequency: 59
-      EndAmplitude: 1.239
+      StartFrequency: 42
+      StartAmplitude: 0.679
+      EndFrequency: 51.999
+      EndAmplitude: 0.839
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
-      StartFrequency: 57
-      StartAmplitude: 1.1944687500000002
-      EndFrequency: 59
-      EndAmplitude: 1.239
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
-      StartFrequency: 57
-      StartAmplitude: 1.1944687500000002
-      EndFrequency: 59
-      EndAmplitude: 1.239
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -503,36 +2693,14 @@ AcceleratePattern:
       Constant: -1
       MovingValue:
         Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
         Degree: 2
         CurveRate: 0
       VibratoData:
         Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
           Mode: Const
           Constant: -1
           MovingValue:
@@ -543,128 +2711,7 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 53.5
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 7
-    Alternative: Alt2
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 53.5
-      StartAmplitude: 1.1165390625
-      EndFrequency: 57
-      EndAmplitude: 1.1944687500000002
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 53.5
-      StartAmplitude: 1.1165390625
-      EndFrequency: 57
-      EndAmplitude: 1.1944687500000002
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 53.5
-      StartAmplitude: 1.1165390625
-      EndFrequency: 57
-      EndAmplitude: 1.1944687500000002
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
         Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
           Mode: Const
           Constant: -1
           MovingValue:
@@ -673,391 +2720,6 @@ AcceleratePattern:
             StartValue: 0
             End: 1
             EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 43.5
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 7
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 43.5
-      StartAmplitude: 0.94083090378835
-      EndFrequency: 53.5
-      EndAmplitude: 1.13412536442935
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 43.5
-      StartAmplitude: 0.94083090378835
-      EndFrequency: 53.5
-      EndAmplitude: 1.13412536442935
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 43.5
-      StartAmplitude: 0.94083090378835
-      EndFrequency: 53.5
-      EndAmplitude: 1.13412536442935
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 36.7
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 9
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 36.7
-      StartAmplitude: 0.80939067055247
-      EndFrequency: 43.5
-      EndAmplitude: 0.94083090378835
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 36.7
-      StartAmplitude: 0.80939067055247
-      EndFrequency: 43.5
-      EndAmplitude: 0.94083090378835
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 36.7
-      StartAmplitude: 0.80939067055247
-      EndFrequency: 43.5
-      EndAmplitude: 0.94083090378835
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 30
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 11
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 30
-      StartAmplitude: 0.679883381923
-      EndFrequency: 36.7
-      EndAmplitude: 0.80939067055247
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 30
-      StartAmplitude: 0.679883381923
-      EndFrequency: 36.7
-      EndAmplitude: 0.80939067055247
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 30
-      StartAmplitude: 0.679883381923
-      EndFrequency: 36.7
-      EndAmplitude: 0.80939067055247
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
             Degree: 2
             CurveRate: 0
         Interval:
@@ -1078,1577 +2740,69 @@ AcceleratePattern:
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 13
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 27
-      StartAmplitude: 0.6218950437306999
-      EndFrequency: 30
-      EndAmplitude: 0.679883381923
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 27
-      StartAmplitude: 0.6218950437306999
-      EndFrequency: 30
-      EndAmplitude: 0.679883381923
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 27
-      StartAmplitude: 0.6218950437306999
-      EndFrequency: 30
-      EndAmplitude: 0.679883381923
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 24
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 15
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 24
-      StartAmplitude: 0.5639067055383999
-      EndFrequency: 27
-      EndAmplitude: 0.6218950437306999
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 24
-      StartAmplitude: 0.5639067055383999
-      EndFrequency: 27
-      EndAmplitude: 0.6218950437306999
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 24
-      StartAmplitude: 0.5639067055383999
-      EndFrequency: 27
-      EndAmplitude: 0.6218950437306999
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: -1
-  RotateFrequencyFrom: 24
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: false
-  PulseMode:
-    PulseType: ASYNC
-    PulseCount: 1
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics:
-    - Harmonic: 3
-      IsHarmonicProportional: true
-      Amplitude: 0.2
-      IsAmplitudeProportional: true
-      InitialPhase: 0
-      Type: Sine
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0.1
-      EndFrequency: 24
-      EndAmplitude: 0.5639067055383999
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0
-      EndFrequency: -1
-      EndAmplitude: -1
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0
-      EndFrequency: -1
-      EndAmplitude: -1
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: 400
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues:
-        - ControlFrequencyFrom: -1
-          CarrierFrequency: 175
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 0.5
-          CarrierFrequency: 196
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 1.5
-          CarrierFrequency: 223
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 2
-          CarrierFrequency: 233
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 2.7
-          CarrierFrequency: 262
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 3.4
-          CarrierFrequency: 294
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 4.3
-          CarrierFrequency: 311
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 5
-          CarrierFrequency: 350
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 5.6
-          CarrierFrequency: 400
-          FreeRunStuckAtHere: false
-- ControlFrequencyFrom: -1
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: 24
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: ASYNC
-    PulseCount: 1
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics:
-    - Harmonic: 3
-      IsHarmonicProportional: true
-      Amplitude: 0.2
-      IsAmplitudeProportional: true
-      InitialPhase: 0
-      Type: Sine
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0.1
-      EndFrequency: 24
-      EndAmplitude: 0.5639067055383999
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0
-      EndFrequency: -1
-      EndAmplitude: -1
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0
-      EndFrequency: -1
-      EndAmplitude: -1
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Table
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues:
-        - ControlFrequencyFrom: -1
-          CarrierFrequency: 175
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 0.5
-          CarrierFrequency: 196
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 1.5
-          CarrierFrequency: 223
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 2
-          CarrierFrequency: 233
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 2.7
-          CarrierFrequency: 262
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 3.4
-          CarrierFrequency: 294
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 4.3
-          CarrierFrequency: 311
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 5
-          CarrierFrequency: 350
-          FreeRunStuckAtHere: false
-        - ControlFrequencyFrom: 5.6
-          CarrierFrequency: 400
-          FreeRunStuckAtHere: false
-BrakingPattern:
-- ControlFrequencyFrom: 79.5
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: SYNC
-    PulseCount: 1
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 60
-      StartAmplitude: 1
-      EndFrequency: 72
-      EndAmplitude: 1
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 1
-      EndFrequency: 1
-      EndAmplitude: 1
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: -1
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 1
-      EndFrequency: 1
-      EndAmplitude: 1
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: -1
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 70.7
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 3
-    Alternative: Alt1
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 70.7
-      StartAmplitude: 1.2102388
-      EndFrequency: 79.5
-      EndAmplitude: 1.372722
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 70.7
-      StartAmplitude: 1.2102388
-      EndFrequency: 79.5
-      EndAmplitude: 1.372722
-      CurveChangeRate: 0
-      CutOffAmplitude: 0.498
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 70.7
-      StartAmplitude: 1.2102388
-      EndFrequency: 79.5
-      EndAmplitude: 1.372722
-      CurveChangeRate: 0
-      CutOffAmplitude: 0.498
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 63.35
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
   StuckFreeRunOn: true
   EnableFreeRunOff: true
   StuckFreeRunOff: true
-  EnableNormal: false
+  EnableNormal: true
   PulseMode:
     PulseType: SYNC
-    PulseCount: 3
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0
-      EndFrequency: 70.7
-      EndAmplitude: 0.957
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0
-      EndFrequency: 70.7
-      EndAmplitude: 0.978
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0
-      EndFrequency: 70.7
-      EndAmplitude: 0.978
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 63.35
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 5
-    Alternative: Alt1
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 63.35
-      StartAmplitude: 1.0745284
-      EndFrequency: 70.7
-      EndAmplitude: 1.2102388
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 63.35
-      StartAmplitude: 1.0745284
-      EndFrequency: 70.7
-      EndAmplitude: 1.2102388
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 63.35
-      StartAmplitude: 1.0745284
-      EndFrequency: 70.7
-      EndAmplitude: 1.2102388
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 56.84
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 7
-    Alternative: Alt2
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 56.84
-      StartAmplitude: 0.9543277600000001
-      EndFrequency: 63.35
-      EndAmplitude: 1.0745284
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 56.84
-      StartAmplitude: 0.9543277600000001
-      EndFrequency: 63.35
-      EndAmplitude: 1.0745284
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 56.84
-      StartAmplitude: 0.9543277600000001
-      EndFrequency: 63.35
-      EndAmplitude: 1.0745284
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 53.5
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 7
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 53.5
-      StartAmplitude: 0.8898727059955
-      EndFrequency: 56.84
-      EndAmplitude: 0.93918438521092
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 53.5
-      StartAmplitude: 0.8898727059955
-      EndFrequency: 56.84
-      EndAmplitude: 0.93918438521092
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 53.5
-      StartAmplitude: 0.8898727059955
-      EndFrequency: 56.84
-      EndAmplitude: 0.93918438521092
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 41
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 7
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 41
-      StartAmplitude: 0.653700980401
-      EndFrequency: 53.5
-      EndAmplitude: 0.8225122549135
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 41
-      StartAmplitude: 0.653700980401
-      EndFrequency: 53.5
-      EndAmplitude: 0.8225122549135
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 41
-      StartAmplitude: 0.653700980401
-      EndFrequency: 53.5
-      EndAmplitude: 0.8225122549135
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 34.5
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
     PulseCount: 9
     Alternative: Default
     DiscreteTime:
       Enabled: false
       Steps: 2
       Mode: Middle
-    BaseWave: Sine
+    BaseWave: ModifiedSine2
     DiscontinuousMode: None
     PulseHarmonics: []
-    PulseData: {}
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 34.5
-      StartAmplitude: 0.5659191176545
-      EndFrequency: 41
-      EndAmplitude: 0.653700980401
+      StartFrequency: 27
+      StartAmplitude: 0.526
+      EndFrequency: 41.999
+      EndAmplitude: 0.819
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
-      StartFrequency: 34.5
-      StartAmplitude: 0.5659191176545
-      EndFrequency: 41
-      EndAmplitude: 0.653700980401
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
-      StartFrequency: 34.5
-      StartAmplitude: 0.5659191176545
-      EndFrequency: 41
-      EndAmplitude: 0.653700980401
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -2682,10 +2836,10 @@ BrakingPattern:
       Constant: -1
       MovingValue:
         Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
         Degree: 2
         CurveRate: 0
       VibratoData:
@@ -2694,10 +2848,10 @@ BrakingPattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Lowest:
@@ -2705,10 +2859,10 @@ BrakingPattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Interval:
@@ -2725,280 +2879,16 @@ BrakingPattern:
         BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 28.9
+- ControlFrequencyFrom: 16
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
-  StuckFreeRunOn: false
+  StuckFreeRunOn: true
   EnableFreeRunOff: true
-  StuckFreeRunOff: false
+  StuckFreeRunOff: true
   EnableNormal: true
   PulseMode:
-    PulseType: CHM
-    PulseCount: 11
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 28.9
-      StartAmplitude: 0.49029166667290003
-      EndFrequency: 34.5
-      EndAmplitude: 0.5659191176545
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 28.9
-      StartAmplitude: 0.49029166667290003
-      EndFrequency: 34.5
-      EndAmplitude: 0.5659191176545
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 28.9
-      StartAmplitude: 0.49029166667290003
-      EndFrequency: 34.5
-      EndAmplitude: 0.5659191176545
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 24.9
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
-    PulseCount: 13
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics: []
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 24.9
-      StartAmplitude: 0.43627205882889997
-      EndFrequency: 28.9
-      EndAmplitude: 0.49029166667290003
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 24.9
-      StartAmplitude: 0.43627205882889997
-      EndFrequency: 28.9
-      EndAmplitude: 0.49029166667290003
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 24.9
-      StartAmplitude: 0.43627205882889997
-      EndFrequency: 28.9
-      EndAmplitude: 0.49029166667290003
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: -1
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: 0
-            StartValue: 0
-            End: 1
-            EndValue: 100
-            Degree: 2
-            CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 22.4
-  RotateFrequencyFrom: -1
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: true
-  PulseMode:
-    PulseType: CHM
+    PulseType: SYNC
     PulseCount: 15
     Alternative: Default
     DiscreteTime:
@@ -3008,43 +2898,54 @@ BrakingPattern:
     BaseWave: Sine
     DiscontinuousMode: None
     PulseHarmonics: []
-    PulseData: {}
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 22.4
-      StartAmplitude: 0.4025098039264
-      EndFrequency: 24.9
-      EndAmplitude: 0.43627205882889997
+      StartFrequency: 16
+      StartAmplitude: 0.326
+      EndFrequency: 26.999
+      EndAmplitude: 0.552
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
-      StartFrequency: 22.4
-      StartAmplitude: 0.4025098039264
-      EndFrequency: 24.9
-      EndAmplitude: 0.43627205882889997
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
       AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
-      StartFrequency: 22.4
-      StartAmplitude: 0.4025098039264
-      EndFrequency: 24.9
-      EndAmplitude: 0.43627205882889997
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -3078,10 +2979,10 @@ BrakingPattern:
       Constant: -1
       MovingValue:
         Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
         Degree: 2
         CurveRate: 0
       VibratoData:
@@ -3090,10 +2991,10 @@ BrakingPattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Lowest:
@@ -3101,10 +3002,10 @@ BrakingPattern:
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Interval:
@@ -3121,9 +3022,295 @@ BrakingPattern:
         BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: 4
+- ControlFrequencyFrom: 8
   RotateFrequencyFrom: -1
-  RotateFrequencyBelow: 22.4
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 27
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 8
+      StartAmplitude: 0.164
+      EndFrequency: 15.999
+      EndAmplitude: 0.327
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 6
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: -1
+  EnableFreeRunOn: true
+  StuckFreeRunOn: true
+  EnableFreeRunOff: true
+  StuckFreeRunOff: true
+  EnableNormal: true
+  PulseMode:
+    PulseType: SYNC
+    PulseCount: 45
+    Alternative: Default
+    DiscreteTime:
+      Enabled: false
+      Steps: 2
+      Mode: Middle
+    BaseWave: Sine
+    DiscontinuousMode: None
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+  Amplitude:
+    Default:
+      Mode: Linear
+      StartFrequency: 6
+      StartAmplitude: 0.121
+      EndFrequency: 7.999
+      EndAmplitude: 0.162
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOn:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+    PowerOff:
+      Mode: Linear
+      StartFrequency: 0
+      StartAmplitude: 0
+      EndFrequency: -1
+      EndAmplitude: -1
+      CurveChangeRate: 0
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
+      DisableRangeLimit: false
+      Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
+  AsyncModulationData:
+    RandomData:
+      Range:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+      Interval:
+        Mode: Const
+        Constant: 0
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
+    CarrierWaveData:
+      Mode: Const
+      Constant: -1
+      MovingValue:
+        Type: Proportional
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
+        Degree: 2
+        CurveRate: 0
+      VibratoData:
+        Highest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Lowest:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        Interval:
+          Mode: Const
+          Constant: -1
+          MovingValue:
+            Type: Proportional
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
+            Degree: 2
+            CurveRate: 0
+        BaseWave: Triangle
+      CarrierFrequencyTable:
+        CarrierFrequencyTableValues: []
+- ControlFrequencyFrom: 5
+  RotateFrequencyFrom: -1
+  RotateFrequencyBelow: -1
   EnableFreeRunOn: true
   StuckFreeRunOn: false
   EnableFreeRunOff: true
@@ -3139,24 +3326,29 @@ BrakingPattern:
       Mode: Middle
     BaseWave: Sine
     DiscontinuousMode: None
-    PulseHarmonics:
-    - Harmonic: 3
-      IsHarmonicProportional: true
-      Amplitude: 0.2
-      IsAmplitudeProportional: true
-      InitialPhase: 0
-      Type: Sine
-    PulseData: {}
+    PulseHarmonics: []
+    PulseData:
+      Dipolar:
+        Mode: Const
+        Constant: -1
+        MovingValue:
+          Type: Proportional
+          Start: 0
+          StartValue: 0
+          End: 1
+          EndValue: 100
+          Degree: 2
+          CurveRate: 0
   Amplitude:
     Default:
       Mode: Linear
-      StartFrequency: 4
-      StartAmplitude: 0.154019607844
-      EndFrequency: 22.4
-      EndAmplitude: 0.4025098039264
+      StartFrequency: 5
+      StartAmplitude: 0.101
+      EndFrequency: 5.999
+      EndAmplitude: 0.121
       CurveChangeRate: 0
       CutOffAmplitude: -1
-      MaxAmplitude: 1.25
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -3168,8 +3360,8 @@ BrakingPattern:
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
-      CutOffAmplitude: 0
-      MaxAmplitude: 1.25
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -3181,8 +3373,8 @@ BrakingPattern:
       EndFrequency: -1
       EndAmplitude: -1
       CurveChangeRate: 0
-      CutOffAmplitude: 0
-      MaxAmplitude: 1.25
+      CutOffAmplitude: -1
+      MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
       AmplitudeTableInterpolation: false
@@ -3213,39 +3405,17 @@ BrakingPattern:
           CurveRate: 0
     CarrierWaveData:
       Mode: Const
-      Constant: 400
+      Constant: 200
       MovingValue:
         Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
+        Start: 0
+        StartValue: 0
+        End: 1
+        EndValue: 100
         Degree: 2
         CurveRate: 0
       VibratoData:
         Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Lowest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
-        Interval:
           Mode: Const
           Constant: -1
           MovingValue:
@@ -3256,131 +3426,15 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        BaseWave: Triangle
-      CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
-- ControlFrequencyFrom: -1
-  RotateFrequencyFrom: 22.4
-  RotateFrequencyBelow: -1
-  EnableFreeRunOn: true
-  StuckFreeRunOn: false
-  EnableFreeRunOff: true
-  StuckFreeRunOff: false
-  EnableNormal: false
-  PulseMode:
-    PulseType: ASYNC
-    PulseCount: 1
-    Alternative: Default
-    DiscreteTime:
-      Enabled: false
-      Steps: 2
-      Mode: Middle
-    BaseWave: Sine
-    DiscontinuousMode: None
-    PulseHarmonics:
-    - Harmonic: 3
-      IsHarmonicProportional: true
-      Amplitude: 0.2
-      IsAmplitudeProportional: true
-      InitialPhase: 0
-      Type: Sine
-    PulseData: {}
-  Amplitude:
-    Default:
-      Mode: Linear
-      StartFrequency: 4
-      StartAmplitude: 0.154019607844
-      EndFrequency: 22.4
-      EndAmplitude: 0.4025098039264
-      CurveChangeRate: 0
-      CutOffAmplitude: -1
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOn:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0
-      EndFrequency: -1
-      EndAmplitude: -1
-      CurveChangeRate: 0
-      CutOffAmplitude: 0
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-    PowerOff:
-      Mode: Linear
-      StartFrequency: 0
-      StartAmplitude: 0
-      EndFrequency: -1
-      EndAmplitude: -1
-      CurveChangeRate: 0
-      CutOffAmplitude: 0
-      MaxAmplitude: 1.25
-      DisableRangeLimit: false
-      Polynomial: 0
-      AmplitudeTableInterpolation: false
-      AmplitudeTable: *o0
-  AsyncModulationData:
-    RandomData:
-      Range:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-      Interval:
-        Mode: Const
-        Constant: 0
-        MovingValue:
-          Type: Proportional
-          Start: 0
-          StartValue: 0
-          End: 1
-          EndValue: 100
-          Degree: 2
-          CurveRate: 0
-    CarrierWaveData:
-      Mode: Const
-      Constant: 400
-      MovingValue:
-        Type: Proportional
-        Start: -1
-        StartValue: -1
-        End: -1
-        EndValue: -1
-        Degree: 2
-        CurveRate: 0
-      VibratoData:
-        Highest:
-          Mode: Const
-          Constant: -1
-          MovingValue:
-            Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
-            Degree: 2
-            CurveRate: 0
         Lowest:
           Mode: Const
           Constant: -1
           MovingValue:
             Type: Proportional
-            Start: -1
-            StartValue: -1
-            End: -1
-            EndValue: -1
+            Start: 0
+            StartValue: 0
+            End: 1
+            EndValue: 100
             Degree: 2
             CurveRate: 0
         Interval:

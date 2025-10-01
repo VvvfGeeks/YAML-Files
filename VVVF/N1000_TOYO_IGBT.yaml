@@ -139,7 +139,7 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 53.5
@@ -267,7 +267,7 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 33.5
@@ -395,7 +395,7 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 0
@@ -522,7 +522,7 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 BrakingPattern:
@@ -647,7 +647,7 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 91.5
@@ -775,7 +775,7 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 33
@@ -903,7 +903,7 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
 - ControlFrequencyFrom: 0
@@ -1030,6 +1030,6 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
         CarrierFrequencyTableValues: []
