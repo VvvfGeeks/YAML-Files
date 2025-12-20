@@ -1,5 +1,5 @@
 Level: 3
-MasconData:
+JerkSetting:
   Braking:
     On:
       FrequencyChangeRate: 85
@@ -36,6 +36,9 @@ AcceleratePattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData: {}
   Amplitude:
     Default:
@@ -49,6 +52,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: &o0 []
     PowerOn:
       Mode: Linear
       StartFrequency: 58.6
@@ -60,6 +65,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 58.6
@@ -71,6 +78,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -140,9 +149,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 49
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -161,6 +170,9 @@ AcceleratePattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       PulseWidth:
         Mode: Const
@@ -185,6 +197,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 49
@@ -196,6 +210,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 49
@@ -207,6 +223,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -276,9 +294,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 38
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -297,6 +315,9 @@ AcceleratePattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Const
@@ -321,6 +342,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 38
@@ -332,6 +355,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 38
@@ -343,6 +368,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -412,9 +439,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 30
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -433,6 +460,9 @@ AcceleratePattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Moving
@@ -457,6 +487,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 30
@@ -468,6 +500,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 30
@@ -479,6 +513,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -548,9 +584,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 23
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -569,6 +605,9 @@ AcceleratePattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Moving
@@ -593,6 +632,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 23
@@ -604,6 +645,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 23
@@ -615,6 +658,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -684,9 +729,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 22
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -705,6 +750,9 @@ AcceleratePattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Const
@@ -729,6 +777,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 22
@@ -740,6 +790,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 22
@@ -751,6 +803,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -820,9 +874,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -841,6 +895,9 @@ AcceleratePattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Const
@@ -865,6 +922,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -876,6 +935,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -887,6 +948,8 @@ AcceleratePattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -956,9 +1019,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 BrakingPattern:
 - ControlFrequencyFrom: 70
   RotateFrequencyFrom: -1
@@ -978,6 +1041,9 @@ BrakingPattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData: {}
   Amplitude:
     Default:
@@ -991,6 +1057,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 70
@@ -1002,6 +1070,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 70
@@ -1013,6 +1083,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1082,9 +1154,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 52.8
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -1103,6 +1175,9 @@ BrakingPattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       PulseWidth:
         Mode: Const
@@ -1127,6 +1202,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 52.8
@@ -1138,6 +1215,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 52.8
@@ -1149,6 +1228,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1218,9 +1299,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 37
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -1239,6 +1320,9 @@ BrakingPattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Const
@@ -1263,6 +1347,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 34
@@ -1274,6 +1360,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 34
@@ -1285,6 +1373,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1354,9 +1444,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 32
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -1375,6 +1465,9 @@ BrakingPattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Moving
@@ -1399,6 +1492,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 32
@@ -1410,6 +1505,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 32
@@ -1421,6 +1518,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1490,9 +1589,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 27
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -1511,6 +1610,9 @@ BrakingPattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Moving
@@ -1535,6 +1637,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 30
@@ -1546,6 +1650,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 30
@@ -1557,6 +1663,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1626,9 +1734,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 23
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -1647,6 +1755,9 @@ BrakingPattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Const
@@ -1671,6 +1782,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 23
@@ -1682,6 +1795,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 23
@@ -1693,6 +1808,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1762,11 +1879,11 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
-  RotateFrequencyFrom: -1
+  RotateFrequencyFrom: 5.088
   RotateFrequencyBelow: -1
   EnableFreeRunOn: true
   StuckFreeRunOn: false
@@ -1783,6 +1900,9 @@ BrakingPattern:
       Mode: Middle
     BaseWave: Sine
     PulseHarmonics: []
+    CarrierWave:
+      Type: Triangle
+      Option: FallStart
     PulseData:
       Dipolar:
         Mode: Const
@@ -1807,6 +1927,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOn:
       Mode: Linear
       StartFrequency: 0
@@ -1818,6 +1940,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
     PowerOff:
       Mode: Linear
       StartFrequency: 0
@@ -1829,6 +1953,8 @@ BrakingPattern:
       MaxAmplitude: -1
       DisableRangeLimit: false
       Polynomial: 0
+      AmplitudeTableInterpolation: false
+      AmplitudeTable: *o0
   AsyncModulationData:
     RandomData:
       Range:
@@ -1898,6 +2024,6 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []

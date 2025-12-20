@@ -1,5 +1,5 @@
 Level: 2
-MasconData:
+JerkSetting:
   Braking:
     On:
       FrequencyChangeRate: 50
@@ -135,9 +135,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 58
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -255,9 +255,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 48
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -374,9 +374,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 46
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -493,9 +493,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -612,9 +612,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 BrakingPattern:
 - ControlFrequencyFrom: 69.5
   RotateFrequencyFrom: -1
@@ -733,9 +733,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 65
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -853,9 +853,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 56
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -972,9 +972,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 53
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -1091,9 +1091,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 4
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -1210,9 +1210,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -1329,9 +1329,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -1448,6 +1448,6 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []

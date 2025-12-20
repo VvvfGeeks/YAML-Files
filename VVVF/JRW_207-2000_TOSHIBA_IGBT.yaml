@@ -1,5 +1,5 @@
 Level: 3
-MasconData:
+JerkSetting:
   Braking:
     On:
       FrequencyChangeRate: 240
@@ -146,9 +146,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 45.5
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: 53
@@ -288,9 +288,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 14
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: 53
@@ -430,9 +430,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: 53
@@ -572,9 +572,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 45.5
   RotateFrequencyFrom: 53
   RotateFrequencyBelow: -1
@@ -714,9 +714,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 14
   RotateFrequencyFrom: 53
   RotateFrequencyBelow: -1
@@ -856,9 +856,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: 53
   RotateFrequencyBelow: -1
@@ -998,9 +998,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 BrakingPattern:
 - ControlFrequencyFrom: 71
   RotateFrequencyFrom: -1
@@ -1130,9 +1130,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 61
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: 71
@@ -1272,9 +1272,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 14
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: 71
@@ -1414,9 +1414,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: 71
@@ -1556,9 +1556,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 61
   RotateFrequencyFrom: 71
   RotateFrequencyBelow: -1
@@ -1698,9 +1698,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 14
   RotateFrequencyFrom: 71
   RotateFrequencyBelow: -1
@@ -1840,9 +1840,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: 71
   RotateFrequencyBelow: -1
@@ -1982,6 +1982,6 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []

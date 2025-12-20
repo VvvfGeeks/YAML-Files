@@ -1,5 +1,5 @@
 Level: 2
-MasconData:
+JerkSetting:
   Braking:
     On:
       FrequencyChangeRate: 120
@@ -135,9 +135,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 48.5
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -255,9 +255,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -374,9 +374,9 @@ AcceleratePattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 BrakingPattern:
 - ControlFrequencyFrom: 70.5
   RotateFrequencyFrom: -1
@@ -495,9 +495,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 61.5
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -615,9 +615,9 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
 - ControlFrequencyFrom: 0
   RotateFrequencyFrom: -1
   RotateFrequencyBelow: -1
@@ -734,6 +734,6 @@ BrakingPattern:
             EndValue: 100
             Degree: 2
             CurveRate: 0
-        Continuous: true
+        BaseWave: Triangle
       CarrierFrequencyTable:
-        CarrierFrequencyTableValues: []
+        Table: []
