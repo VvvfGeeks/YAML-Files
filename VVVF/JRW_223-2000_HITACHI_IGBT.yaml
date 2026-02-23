@@ -176,7 +176,7 @@ AcceleratePattern:
     PulseData:
       PulseWidth:
         Mode: Const
-        Constant: 0.15393004
+        Constant: 8.819541632279941
         MovingValue:
           Type: Proportional
           Start: 0
@@ -1181,7 +1181,7 @@ BrakingPattern:
     PulseData:
       PulseWidth:
         Mode: Const
-        Constant: 0.15393004
+        Constant: 8.819541632279941
         MovingValue:
           Type: Proportional
           Start: 0

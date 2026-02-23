@@ -2,7 +2,7 @@
 This repository is for sharing YAML files for VVVF-Simulator.
 
 ## Target Version
-The target version is VVVF-Simulator `v1.10.0.0` or later.
+The target version is VVVF-Simulator `v1.10.0.2` or later.
 
 # Note
 - The YAML files will be updated as necessary.
